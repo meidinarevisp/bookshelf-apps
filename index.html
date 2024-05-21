@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="icon" type="image/png" href="images/book.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/krellon-personal-use"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/spicy-crackers"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/routinery-halmonth"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/kerosby-trial"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/power-slime" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/happy-chicken-2"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1>📖Bookshelf Apps 📖</h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input id="inputBookTitle" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input id="inputBookAuthor" type="text" required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" required />
+          </div>
+          <div class="input_inline">
+            <label> Selesai dibaca </label>
+            <label class="switch" for="inputBookIsComplete">
+              <input id="inputBookIsComplete" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <button id="bookSubmit" type="submit">
+            <span>Masukkan Buku ke Rak</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" />
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Daftar Buku Belum Selesai Dibaca</h2>
+        <hr />
+
+        <div id="incompleteBookshelfList" class="book_list"></div>
+
+        <h2>Daftar Buku Selesai Dibaca</h2>
+        <hr />
+
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
